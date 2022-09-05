@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;700&family=Poppins:wght@300;500&display=swap');
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-color: black;
+  font-family: Poppins;
+  font-family: 'Libre Bodoni', serif;
+  color: white;
+  margin: auto;
+}
+.form-container {
+  width: 100vw;
+  height: 10vh;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.form-container > h1 {
+  width: 50vw;
+  font-size: 20px;
+  margin: 10px;
+  padding-bottom: 20px;
+}
+.form-container > h1 > span {
+  color: white;
+}
+.shark {
+  width: 40px;
+  height: 40px;
+}
+.form-container > form {
+  padding-right: 15rem;
+}
+
+.search-bar:focus {
+  outline: none;
+}
+.search-bar {
+  height: 30px;
+  width: 12rem;
+  background-color: black;
+  border: none;
+  border-bottom: 2px solid gray;
+  color: rgb(71, 234, 204);
+  font-family: 'Libre Bodoni', serif;
+  font-size: 17px;
+}
+
+.search-btn {
+  cursor: pointer;
+  height: 2rem;
+  width: 5rem;
+  color: rgb(71, 234, 204);
+}
+.cards {
+  height: 100%;
+  width: 75%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
