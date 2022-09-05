@@ -1,6 +1,6 @@
 .card {
   position: relative;
-  height: 80vh;
+  height: 65vh;
   width: 27vw;
   margin: 10px;
   padding-top: 10px;
@@ -89,7 +89,7 @@ h1 {
   text-align: start;
   border: 1px solid #333333;
   width: 375px;
-  height: 200px;
+  height: 100px;
   overflow: auto;
 }
 ul li {
@@ -98,4 +98,16 @@ ul li {
 li::before {
   content: '• ';
   color: rgb(71, 234, 204);
+}
+@media screen and (max-width: 600px) {
+  .card {
+    height: 65vh;
+    width: 55vw;
+  }
+  .ingredients {
+    width: 250px;
+  }
+  .card-btn {
+    right: 65px;
+  }
 }
