@@ -28,7 +28,7 @@ function Card({ recipe, index, ingredients }) {
           );
         })}
       </div>
-      <button className="card-btn" src={recipe.recipe.uri}>
+      <button className="card-btn" src={recipe.recipe.url}>
         Full Recipe
       </button>
 

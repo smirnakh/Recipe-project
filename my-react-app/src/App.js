@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from './components/Card';
 import Spinner from './components/Spinner';
@@ -32,6 +32,9 @@ function App() {
     e.preventDefault();
     getRecipes();
   };
+  useEffect(() => {
+    document.title = 'MY RECIPES.yum';
+  }, []);
 
   return (
     <div className="App">
@@ -55,6 +58,7 @@ function App() {
         </form>
       </div>
       <Spinner on={spinnerOn} />
+
       <div className="cards">
         {recipes.map((recipe, index) => {
           return (
@@ -62,6 +66,7 @@ function App() {
               recipe={recipe}
               index={index}
               ingredients={recipe.recipe.ingredients}
+              onClick={() => {}}
             />
           );
         })}
