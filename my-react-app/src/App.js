@@ -38,38 +38,40 @@ function App() {
 
   return (
     <div className="App">
-      <div className="form-container">
-        <h1>
-          <GiFoodChain className="shark" />
-          <span>MY</span> RECIPES<span>.yum</span>
-        </h1>
-        <form className="search-form" onSubmit={onSubmit}>
-          <input
-            className="search-bar"
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Enter Ingredient"
-          />
-          <BiSearchAlt
-            className="search-btn"
-            onClick={getRecipes}
-          ></BiSearchAlt>
-        </form>
-      </div>
-      <Spinner on={spinnerOn} />
-
-      <div className="cards">
-        {recipes.map((recipe, index) => {
-          return (
-            <Card
-              recipe={recipe}
-              index={index}
-              ingredients={recipe.recipe.ingredients}
-              onClick={() => {}}
+      <div className="content">
+        <div className="form-container">
+          <h1>
+            <GiFoodChain className="shark" />
+            <span>MY</span> RECIPES<span>.yum</span>
+          </h1>
+          <form className="search-form" onSubmit={onSubmit}>
+            <input
+              className="search-bar"
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Enter Ingredient"
             />
-          );
-        })}
+            <BiSearchAlt
+              className="search-btn"
+              onClick={getRecipes}
+            ></BiSearchAlt>
+          </form>
+        </div>
+        <Spinner on={spinnerOn} />
+
+        <div className="cards">
+          {recipes.map((recipe, index) => {
+            return (
+              <Card
+                recipe={recipe}
+                key={index}
+                ingredients={recipe.recipe.ingredients}
+                onClick={() => {}}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

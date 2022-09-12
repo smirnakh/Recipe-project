@@ -7,7 +7,7 @@
   padding-bottom: 20px;
   margin-bottom: 30px;
   gap: 20px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(245, 239, 239, 0.951);
   border-radius: 16px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -52,7 +52,7 @@ h1 {
   position: absolute;
   bottom: 8px;
   right: 5px;
-
+  text-decoration: none;
   font-family: 'Libre Bodoni', serif;
   width: 150px;
   height: 40px;

@@ -20,17 +20,20 @@ function Card({ recipe, index, ingredients }) {
         </div>
       </div>
       <div className="ingredients">
-        {ingredients.map((ingredient) => {
-          return (
-            <ul>
-              <li>{ingredient.text}</li>
-            </ul>
-          );
-        })}
+        <ul>
+          {ingredients.map((ingredient, index) => {
+            return <li key={index}>{ingredient.text}</li>;
+          })}
+        </ul>
       </div>
-      <button className="card-btn" src={recipe.recipe.url}>
+      <a
+        className="card-btn"
+        href={recipe.recipe.url}
+        target="_blank"
+        rel="noreferrer"
+      >
         Full Recipe
-      </button>
+      </a>
 
       <div className="time-servings">
         <p id="servings">

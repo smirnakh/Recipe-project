@@ -1,32 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;700&family=Poppins:wght@300;500&display=swap');
 
 .App {
-  width: min(70%, 1000px);
-  height: 100vh;
-  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
   background-color: black;
   font-family: Poppins;
   font-family: 'Libre Bodoni', serif;
   color: white;
   margin-inline: auto;
 }
+.content {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .form-container {
-  width: 70%;
+  width: 100%;
   height: 20vh;
   margin: 0;
-  border: 2px solid white;
+
   display: flex;
-  justify-content: center;
-  gap: 50px;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 
   /* padding-bottom: 30px; */
 }
 .search-form {
+  width: 60%;
   display: flex;
+  justify-content: space-between;
+  transform: translateX(10%);
 }
 .form-container > h1 {
-  width: 50vw;
+  width: 60%;
   font-size: 20px;
   margin: 10px;
   padding-bottom: 20px;
@@ -37,9 +47,6 @@
 .shark {
   width: 40px;
   height: 40px;
-}
-.form-container > form {
-  padding-right: 15rem;
 }
 
 .search-bar:focus {
@@ -63,13 +70,31 @@
   color: rgb(71, 234, 204);
 }
 .cards {
-  height: 100%;
-  width: min(75%, 20vw);
+  width: 100%;
   margin-inline: auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding-left: 150px;
+}
+
+@media only screen and (min-width: 391px) {
+  .content {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .content {
+    width: 70%;
+  }
+  .form-container {
+    flex-direction: row;
+  }
+  .search-form {
+    width: 40%;
+  }
+  .form-container > h1 {
+    width: 30%;
+  }
 }
 /* @media only screen and (max-width: 820px) {
   .App {
